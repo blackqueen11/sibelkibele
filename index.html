@@ -2,12 +2,54 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="logo.png">
-    <meta name="google-site-verification" content="JPy2yxGbZ3jpFvgsG9KHOlJRUR6fAXvnP554vUXrgMg" />
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kibele - Kalbimden Taşanlar</title>
-    <style>
+    <style> body { 
+        font-family: 'Georgia', serif; 
+        background: #faf4ed; 
+        color: #333; 
+        text-align: center; 
+        padding: 20px; 
+    }.header {
+        background-color: white;  /* Arka planı beyaz yapıyoruz */
+        padding: 20px;            /* Yazının etrafına boşluk ekliyoruz */
+        border-radius: 10px;      /* Köşeleri yuvarlatıyoruz */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekliyoruz */
+    }
+
+    .header h1 {
+        font-size: 20px; /* Başlığın boyutunu ayarlıyoruz */
+        color: #333;     /* Başlık rengini koyu gri yapıyoruz */
+    }
+    .gallery img { 
+        width: 200px; 
+        border-radius: 10px; 
+    }
+    .gallery a { background: white;
+            padding: 20px;
+            margin: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 60%;
+            min-width: 300px;
+            max-width: 800px;
+            text-decoration: none; 
+            color: #444; 
+            display: inline-block; 
+       
+    }
+    .content { 
+        display: none; 
+        max-width: 600px; 
+        margin: auto; 
+    }
+    .back { 
+        margin-top: 20px; 
+        display: block; 
+        color: #0077aa; 
+        cursor: pointer; 
+    }
         body {
             margin: 0;
             padding: 0;
@@ -83,13 +125,30 @@
     <h1>Kibele</h1>
     <p>Kalbimden Taşanlar</p>
 </header>
+<div class="header">
+    <p> Merhaba ben Sibel ⏾.<br>
+        Burada sevdiğim kitapları, şarkıları, mitleri ve kalbimden taşan diğer şeyleri paylaşacağım.<br>
+        Hoş geldin! ✮ ⋆ ˚｡𖦹 ⋆｡°✩</p>
+</div>
 
-<div class="content">
-    <p>Merhaba ben Sibel ⏾.<br>
-     Burada sevdiğim kitapları, şarkıları, mitleri ve kalbimden taşan diğer şeyleri paylaşıyorum.<br>
-     Hoş geldin! ✮ ⋆ ˚｡𖦹 ⋆｡°✩</p>
-      <h2>જ⁀➴ ♡Cupid ve Psyche♡ જ⁀➴ </h2>
-      <p>Blog'uma bana mitolojiyi sevdiren bu aşk hikayesiyle başlamak istedim.En sonda da Louvre müzesinde çektiğim heykeli sizlerle paylaşmış olacağım.
+<div class="gallery">
+    
+    <a href="#" onclick="showStory('cupid')">
+        <img src="sibel.jpg.jpg" alt="Cupid ve Psyche">
+        <h3>Cupid ve Psyche</h3>
+        <p>Tanrılaştıran bir aşk...</p>
+    </a>
+
+    <a href="#" onclick="showStory('baska')">
+        <img src="download.jpeg" alt="İn A Manner of Speaking">
+        <h3>İn A Manner of Speaking</h3>
+        <p>Hoş bir şarkı</p>
+    </a>
+</div>
+
+<div class="content" id="cupid">
+    <h2>જ⁀➴ ♡Cupid ve Psyche♡ જ⁀➴</h2>
+    <p>Blog'uma bana mitolojiyi sevdiren bu aşk hikayesiyle başlamak istedim.En sonda da Louvre müzesinde çektiğim heykeli sizlerle paylaşmış olacağım.
         Psyche, Milet kralının üç kızından küçük olanı idi. Ablalarıyla kıyaslandığında hem huy hem de güzellik açısından üstün bir kızdı.
         Milet halkı tarafından sevgi ve hayranlık görmekteydi. Psyche o kadar güzeldi ki artık Afrodit onu kıskanmaya başlamıştı. 
         Kızın güzelliğine hayran kalan insanlar ona tapıyor ve bazıları Afrodit'i tamamen unutuyorlardı.
@@ -99,14 +158,12 @@
         gelmesine rağmen bir türlü evlenmeyen Psyche'nin babası bu duruma üzülerek bir Apollon rahibine danıştı. Rahip onlara kızlarını bir uçurumun
         kenarına bırakmalarını, orada kızlarının çok çirkin bir canavarla evlenmesi gerektiğini söyledi. Babası çok üzülerek kızı Psyche'ye gelinlik
         giydirerek bir ağıt eşliğinde uçurumun kenarına bıraktı. Fakat aslında Apollon ile önceden görüşürüp bunları dedirten Eros'tu.
-        Psyche terk edildiği uçurum kenarından atlamaya yeltendi ancak atladığı anda Zephyr, diğer adıyla batı rüzgarı, onu yakalandı ve Eros'un onu saklamak için ördüğü pamuk ipliğine bağlı bir büyü ile korunan kaleye götürdü. Burada Afrodit'in gözünde uzak olacaktı ve güzellik tanrıçası onu ölü sanacaktı.
-
+        Psyche terk edildiği uçurum kenarından atlamaya yeltendi ancak atladığı anda Zephyr, diğer adıyla batı rüzgarı, onu yakalandı ve Eros'un onu saklamak için ördüğü pamuk ipliğine bağlı bir büyü ile korunan kaleye götürdü. 
+        Burada Afrodit'in gözünde uzak olacaktı ve güzellik tanrıçası onu ölü sanacaktı.
 Eros kaleye geldi ve bu kalede birlikte mutlu bir çift aşık olarak yaşadılar. Ancak Eros'un Psyche'den tek bir isteği vardı: Asla Eros'un yüzünü gündüz gözüyle göremezdi, hatta onun kim olduğunu bile bilemezdi. Psyche, sevdiği adamla tüm tanrıların gözünden uzak, sakin ve güzelliklerle dolu bir kalede yaşamayı yeterince değerli bir şey olarak gördüğünden, onu hiç görmemeyi ve kim olduğunu bilmemeyi dert etmedi.
-
 Eros sadece geceleri kaleye gelirdi. Çünkü Güneş'in ışığı, gündüzleri Psyche'nin Erosu tanımasını sağlardı. Bu yüzden bir kez bile aşklarını gün yüzünde yaşayamadan birbirlerini bile görmeden uzun zaman geçirdiler. Bu sürede Psyche halinden memnundu. Hatta eski evindeki ailesine mektuplar yazmaya, oradaki hayatından bahsetmeye başlamıştı bile. Bir süre sonra Psyche hamile kaldı. Aklındaki tek soru ise asla görmediği bir adam ile nasıl bir bebek yetiştireceği idi. Bu mektupları alan ailesi, önce Psyche'in hayatta olduğunu, mutlu ve refah içinde olduğunu öğrenmekten mutlu oldu. Ancak sonra, kıskanç ablası onu ziyaret etmek istedi. Psyche'nin bir zamanlar atladığı uçurumdan atladı ve Zephyr, tıpkı Psyche'i kurtardığı gibi onu da kurtarıp saraya taşıdı. Burada Psyche'nin hayatını gören ablası, o hayata sahip olmak istedi. Psycheye asla görmediği bir adamla bebek yetiştiremeyeceğini ve aslında o adamın iğrenç bir ejderha olduğunu anlattı. Psycheye uzun zamandır dokunduğu o kanatların bir ejderhaya ait olabileceğini aklına getirmemişti. Fakat şüphe tohumu aklına ekilmişti bir kere. Ne yapıp edip sevgilisini görmeye karar verdi.
-
-Eros uyurken onun yanına sessizce yaklaştı ve bir gaz lambası ışığı yardımıyla yüzüne baktı. Gördüğü varlığın bir ejderha olmadığını aynı anda mutluluk ve dehşet içinde gördü. Tanrı Eros'u anında tanımıştı, zaten öylesine güzel bir yüz başka kime ait olabilirdi ki? Kandırılmanın verdiği üzüntü ve sevgilisine ettiği ihaneti telafi edemeyecek olmasının ümitsizliği ile elindeki gaz lambasını Eros'un üstüne düşürdü. Eros hayret içinde uyandı ve olanları anında anladı. Büyük bir ümitsizlik içinde Psyche kurduğu bu sarayın yıkılacağını ve Afrodit'ten korunmasının tek yolu olan gizlilik büyüsünün, sarayla birlikte yok olacağını söyledi. Çünkü büyünün tek kaynağı Psyche'nin, Eros'un kim olduğunu bilmemesine dayanıyordu.
-
+Eros uyurken onun yanına sessizce yaklaştı ve bir gaz lambası ışığı yardımıyla yüzüne baktı. Gördüğü varlığın bir ejderha olmadığını aynı anda mutluluk ve dehşet içinde gördü. Tanrı Eros'u anında tanımıştı, zaten öylesine güzel bir yüz başka kime ait olabilirdi ki? Kandırılmanın verdiği üzüntü ve sevgilisine ettiği ihaneti telafi edemeyecek olmasının ümitsizliği ile elindeki gaz lambasını Eros'un üstüne düşürdü. Eros hayret içinde uyandı ve olanları anında anladı. Büyük bir ümitsizlik içinde Psyche kurduğu bu sarayın yıkılacağını ve Afrodit'ten korunmasının tek yolu olan gizlilik büyüsünün, sarayla birlikte yok olacağını söyledi. 
+Çünkü büyünün tek kaynağı Psyche'nin, Eros'un kim olduğunu bilmemesine dayanıyordu.
 Son olarak "zaten bir tanrı ve bir ölümlü birbirini nasıl eşit sevebilir ki?" diyerek kanatlarını açtı ve bir daha Psycheyi görmemek üzere uzaklaştı.
 Psyche bu olanlara çok üzüldü ve dışarı çıkıp her yerde Eros'u aramaya koyuldu fakat Afrodit ile yolu kesildi. Afrodit onun ölmemesine çok sinirlenmiş ve ona yapması imkansız üç görevi yapması
 karşılığında Eros'u yeniden görebileceğini söylemişti. Ama Psyche görevlerin imkansız olduğunu bilmiyordu.
@@ -121,13 +178,63 @@ Fakat kutu güzellik yerine uyku ile doldurulmuştu. O anda Psyche sonsuz bir uy
 Psyche'nin sonsuz uykuya mahkum olduğunu öğrenince hemen onun yanına uçtu. Onun korkusuzluğu ve bilinmeyenle hiç tereddüt etmeden yüzleşmesi, kendisinin dengi olmaktan da öte olduğunu söyledi. 
 Eros Psycheyi ambrosia (ambrozya) ile besledi. Yani tanrıların nektarı ve yegane yiyeceği ile. 
 Bu sayede o da tüm tanrıların huzurunda Moiraların kararı ile ölümsüz oldu. Ölümsüz olmasının kısa bir süre ardından Psyche çocuğunu doğurdu. Bu çocuğa Hedone (haz) adını verdiler.
-"Psikoloji", "psikolog" gibi kelimeler Psycheden gelir. Psyche aynı zamanda ruh anlamına da gelir.
-      </p>
-      <img src="sibel.jpg.jpg" 
+"Psikoloji", "psikolog" gibi kelimeler Psycheden gelir. Psyche aynı zamanda ruh anlamına da gelir.</p>
+<img src="sibel.jpg.jpg" 
 alt="Sibel'in Fotoğrafı" 
 style="width: 100%; max-width: 600px; margin-top: 20px; border-radius: 12px;">
-
+    <span class="back" onclick="goBack()">← Geri Dön</span>
 </div>
 
+<div class="content" id="baska">
+    <h2>İn a Manner of Speaking</h2>
+    <p>Benim için bir ilişkide iletişimin ne kadar önemli olduğunu anlatan hoş bir şarkı bu. Sessizliğin bir zaman sonra nasıl da bir azarlamaya dönüştüğünü söylemek isteyen. İşte türkçe çevirisi ;
+        <p>
+            Tabiri caizse,<br>
+            Bana hiçbir şey demeden<br>
+            Her şeyi söyleme şeklini,<br>
+            Hiç unutamadığımı söylemek istiyorum.<br>
+            Tabiri caizse,<br>
+            Sessizliğin içindeki aşkın,<br>
+            Nasıl da bir azarlamaya dönüştüğünü anlamıyorum.<br>
+            Fakat sana duyduğum hisler,<br>
+            Kelimelerin de ötesinde.<br>
+            Ah, bana hiçbir şey söylemeyen,<br>
+            o kelimeleri ver.<br>
+            Bana her şeyi söyleyen,<br>
+            o kelimeleri, kelimeleri ver.<br><br>
+            
+            Tabiri caizse, ki semantikler yapamazlar.<br>
+            Yaşadığımız bu hayatta <br>
+            Sadece idare ediyoruz,<br>
+            Hislerimizin feda edilmesi gerekebileceği şekilde.<br><br>
+            
+            Yani tabiri caizse demek istiyorum ki,<br>
+            Senin gibi hiçbir şey demeden,<br>
+            Her şeyi diyebilmenin bir yolunu bulmalıyım.<br>
+            Ah, bana hiçbir şey söylemeyen,<br>
+            o kelimeleri ver.<br>
+            Bana her şeyi söyleyen,<br>
+            o kelimeleri, kelimeleri ver.
+            </p>
+            
+            
+
+    </p>
+        <a href="https://youtu.be/zXhLFb34nz4?si=4eToAiY-NBPMuKrl">youtu</a>
+    <span class="back" onclick="goBack()">← Geri Dön</span>
+</div>
+
+<script>
+    function showStory(storyId) {
+        document.querySelector('.gallery').style.display = 'none';
+        document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+        document.getElementById(storyId).style.display = 'block';
+    }
+    
+    function goBack() {
+        document.querySelector('.gallery').style.display = 'block';
+        document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+    }
+    </script>
 </body>
 </html>
